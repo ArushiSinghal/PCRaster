@@ -11,16 +11,16 @@ binding
  InfiltrationCapacity=infilcap.map;  # reported map with infiltr. cap.
  Dem=dem.map;                        # digital elevation map
  Ldd=ldd.map;                        # reported local drain direction map
- ConvConst=216000;                   # conversion mm/6hours => m3/s
+ ConvConst=5400;                   # conversion mm/6hours => m3/s
  RunOff=runoff;                      # reported stack of maps with
 
 timer
- 1 28 1;
+ 1 365 1;
 
 initial
  # coverage of meteorological stations for the whole area
  RainZones=spreadzone(RainStations,0,1);
- # create an infiltration capacity map (mm/6 hours), based on the soil map
+ # create an infiltration capacity map (mm/24 hours), based on the soil map
  InfiltrationCapacity=lookupscalar(SoilInfiltrationTable,SoilType);
  # generate the local drain direction map on basis of the elevation map
  Ldd=lddcreate(Dem,1e31,1e31,1e31,1e31);

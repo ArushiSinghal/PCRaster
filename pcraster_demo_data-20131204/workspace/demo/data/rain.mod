@@ -11,7 +11,7 @@ areamap
  mask.map;
 
 timer
- 1 28 1;
+ 1 365 1;
 
 initial
  # coverage of meteorological stations for the whole area

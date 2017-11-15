@@ -11,7 +11,7 @@ binding
  InfiltrationCapacity=infilcap.map;  # reported map with infiltr. cap.
  Dem=dem.map;                        # digital elevation map
  Ldd=ldd.map;                        # reported local drain direction map
- ConvConst=216000;                   # conversion mm/6hours => m3/s
+ ConvConst=5400;                   # conversion mm/6hours => m3/s
  RunOff=runoff;                      # reported stack of maps with
 
  SamplePlaces=samples.map;           # map with runoff sampling locations
@@ -19,7 +19,7 @@ binding
                                      # at sampling locations
 
 timer
- 1 28 1;
+ 1 365 1;
 
 initial
  # coverage of meteorological stations for the whole area
